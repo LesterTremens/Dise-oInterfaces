@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejemplos de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<title>Funciones útiles Introducción jQuery</title>
+	<script type="text/javascript">
+		function resaltar(){
+			$('.result div p').toggleClass('resaltar');	
+		}
+		function aplica_p(){
+			$('.result p').toggleClass('literario');	
+		}
+	</script>
+	<style type="text/css">
+		.resaltar{background:#FFFF9A;color:#4D4D4D;}
+		.literario{background:#ADD8E6;text-align:justify;font-style:italic;line-height: 1.2em;}
+		
+	</style>	
+</head>
+<body>
+
+	<div id="container">
+	
+	<h1 class="esq_red">Selector descendente</h1>
+	<div class="definicion">
+		<p>En el div.result.</p>
+		<ol>
+			<li>Crear dos titulares un h1 y h2 en el mismo nivel de estructura HTML.</li>	
+			<li>Crear un div que contenga 3 párrafos con contenido Lorem ipsum inmediatos al titular h1.</li>
+			<li>Crear dos párrafos con contenido Lorem ipsum inmediatos al titular h2.</li>
+			<li>Crear dos clases de estilo CSS:
+				<ol>
+					<li>resaltar.- pone un color de fondo #FFFF9A y un color de texto #4D4D4D</li>
+					<li>literario.- pone un color de fondo #ADD8E6, el texto justificado en itálica y una separación entre líneas de 1.2em</li>
+				</ol>
+			</li>
+			<li>Crear dos funciones en jQuery con sus mecanismos de acción:
+				<ol>
+					<li>resaltar().- Que utiliza el método toggleClass() para alternar la clase 'resaltar' a los párrafos 
+					contenidos en un div que a su vez este contenido en el div  con clase 'result'. </li>
+					<li>aplica_p().- Similar a resaltar(), pero aplica la clase 'literario' a todos los párrafos contenidos en un
+					div con clase 'result'</li>
+				</ol>
+			</li>
+		</ol>
+	</div>	
+
+<pre>
+//reglas de estilo CSS
+< style type="text/css">
+  .resaltar{background:#FFFF9A;color:#4D4D4D;}
+  .literario{background:#ADD8E6;text-align:justify;font-style:italic;line-height: 1.2em;}
+< /style>
+//Código en javascript
+< script type="text/javascript">
+  function resaltar(){
+    $('.result div p').toggleClass('resaltar');	
+  }
+  function aplica_p(){
+    $('.result p').toggleClass('literario');	
+  }
+</ script>
+//código en HTMl
+< div class = "result">
+  < h1 class="esq_red">Lorem ipsum ad his scripta blandit partiendo< /h1>
+  < div>
+    < p >Lorem ipsum ad his < a href="#">scripta blandit partiendo< /a>,  [...] intellegam, ut fugit veritus 
+    placerat per. < /p>
+    < p>Ius id vidit volumus mandamus, vide veritus democritum te nec, < a href="#">ei  [...]  quas qualisque. Eos vocibus 
+    deserunt quaestio ei.< /p>
+    < p>Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper [...] ad sed, < a href="#">nobis 
+    feugiat< /a> similique usu.< /p>
+  < /div>
+  < h2 class="esq_sup5">Ius id vidit volumus mandamus< /h2>
+  < p>Ea mei < span>nullam facete< /span>, omnis oratio offendit ius cu. Doming takimata [...] repudiandae usu an, mei dicant 
+  fastidii signiferumque in qui.< /p>
+  < p>Vis prodesset adolescens adipiscing te, usu mazim perfecto recteque at, assum putant [...] erroribus mea in. Vel facete 
+  no vel, < span>vim id omnium< /span> insolens. < /p>
+< /div>	
+
+< form>
+  < input type="button" value="Aplica a Párrafos" onClick="aplica_p()"> 
+  < input type="button" value="Resaltar div p" onClick="resaltar()"> 
+< /form>
+</pre>
+
+<h3>Alternar clases en result</h3>
+
+<div class = "result">
+	<h1 class="esq_red">Lorem ipsum ad his scripta blandit partiendo</h1>
+	<div>
+		<p id="fstElement">Lorem ipsum ad his <a href="#">scripta blandit partiendo</a>, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
+		<!--<p id="destacado"> as sd df  dff   sd </p>--> <!--Párrafo para hacer pruebas con los métodos contar_palabras() y listar_palabras() -->
+		<p>Ius id vidit volumus mandamus, vide veritus democritum te nec, <a href="#">ei eos debet libris consulatu</a>. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te. Ne quodsi nusquam legendos has, ea dicit voluptua eloquentiam pro, ad sit quas qualisque. Eos vocibus deserunt quaestio ei.</p>
+		<p>Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim. Eos dicat oratio partem ut, id cum ignota senserit intellegat. Sit inani ubique graecis ad, quando graecis liberavisse et cum, dicit option eruditi at duo. Homero salutatus suscipiantur eum id, tamquam voluptaria expetendis ad sed, <a href="#">nobis feugiat</a> similique usu.</p>
+	</div>
+	<h2 class="esq_sup5">Ius id vidit volumus mandamus</h2>
+	<p>Ea mei <span>nullam facete</span>, omnis oratio offendit ius cu. Doming takimata repudiandae usu an, mei dicant takimata id, pri eleifend inimicus euripidis at. His vero singulis ea, quem euripidis abhorreant mei ut, et populo iriure vix. Usu ludus affert voluptaria ei, vix ea error definitiones, movet fastidii signiferumque in qui.</p>
+	<p>Vis prodesset adolescens adipiscing te, usu mazim perfecto recteque at, assum putant erroribus mea in. Vel facete imperdiet id, cum an libris luptatum perfecto, vel fabellas inciderint ut. Veri facete debitis ea vis, ut eos oratio erroribus. Sint facete perfecto no vel, <span>vim id omnium</span> insolens. </p>
+	
+</div>	
+<form>
+	<input type="button" value="Aplica a Párrafos" onClick="aplica_p()"> 
+	<input type="button" value="Resaltar div p" onClick="resaltar()"> 
+</form>
+
+
+</div>
+</body>
+</html>

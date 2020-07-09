@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejemplos de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<title>Manipulación del DOM</title>
+	<script type="text/javascript">
+		function agregar_p(){
+			$('.result div').append('<p>Párrafo de prueba</p>');	
+		}	
+		function agregar_h2(){
+			$('.result').append($('.result h2'));	
+		}	
+		function agregar_text(){
+			$('.result div p').eq(2).append(document.createTextNode(' Texto de prueba '));	
+		}
+		function agregar_Alink(){
+			$('.result div p:last-child').after("<a class='ver_mas' href='#'>Leer más</a>");	
+		}
+		function agregar_Btext(){
+			$('.result div p:first-child').before(document.createTextNode('Comienzan párrafos:'));
+		}
+	</script>
+	
+	<style type="text/css">
+		#container div.result p#destacado {font-size:18px;font-style:italic;}
+		.result div p:first-child{background-color:#FFA500; font-style:none; font-variant:small-caps;padding:3px;}
+		.marcado{background-color:#FFA500; font-style:none; font-variant:small-caps;padding:3px;}
+		.result div{overflow:hidden;}
+		.result div a{margin:5px 10px 10px; float:right;}
+	</style>	
+	
+</head>
+<body>
+
+	<div id="container">
+	
+	<h1 class="esq_red">Insertar elementos HTML</h1>
+	
+	<div class="definicion">
+		<p>Especificaciones del ejemplo: </p>
+		<ol>
+			<li>Cuatro divs con un párrafo descendiente a cada uno.</li>
+			<li>Al primer párrafo descendiente a un div se le aplica el siguiente estilo: color de fondo #FFA500, el texto en 
+				mayúsculas pequeñas y un relleno de 3px.</li>
+			<li>Se crean las funciones de jQuery: agregar_p(), agregar_h2(), agregar_text(), agregar_Btext() y agregar_Alink()
+				con sus mecanismos de acción.
+				<ol>
+					<li><span>agregar_p( )</span>.- Método que utiliza append() para agregar un párrafo al final de cada div.</li>
+					<li><span>agregar_h2( )</span>.- Método que utiliza append() para cambiar la posición del h2 definido al 
+						principio de div.result al final dicho contenedor.	</li>
+					<li><span>agregar_text( )</span>.- Método que utiliza append() y document.createTextNode('str') para agregar 
+						el texto 'str' al primer párrafo  descendiente del div con clase "result".	</li>
+					<li><span>agregar_Btext()</span>.- Método que utiliza before() y document.createTextNode('str') para agregar 
+						el texto 'str' antes del primer párrafo descendiente de un div, que a su vez descienda de un elemento
+						con clase "result".</li>	
+					<li><span>agregar_Alink()</span>.- Método que utiliza after() para agregar un link después del último párrafo
+						descendiente a un div que a su vez descienda de un elemento con clase "result".</li>	
+				</ol>
+			</li>
+		</ol>
+	</div>	
+<pre>
+//reglas de estilo CSS
+< style type="text/css">
+#container div.result p#destacado {font-size:18px;font-style:italic;}
+.result div p:first-child{background-color:#FFA500; font-style:none; font-variant:small-caps;padding:3px;}
+.marcado{background-color:#FFA500; font-style:none; font-variant:small-caps;padding:3px;}
+.result div{overflow:hidden;}
+.result div a{margin:5px 10px 10px; float:right;}
+< /style>
+
+//Código en jQuery
+< script type="text/javascript">
+  function agregar_p(){
+    $('.result div').append('< p>Párrafo de prueba< /p>');	
+  }	
+  function agregar_h2(){
+    $('.result').append($('.result h2'));	
+  }	
+  function agregar_text(){
+    $('.result p').eq(0).append(document.createTextNode(' Texto de prueba '));	
+  }
+  function agregar_Alink(){
+    $('.result div p:last-child').after("< a class='ver_mas' href='#'>Leer más< /a>");	
+  }
+  function agregar_Btext(){
+    $('.result div p:first-child').before(document.createTextNode('Comienzan párrafos:'));
+  }
+</ script>
+
+//código en HTMl
+< div class = "result">
+  < h2>Contenido< /h2>
+  < div>
+    < p>Párrafo 1< /p>
+  < /div>	
+  < div>
+    < p>Párrafo 2< /p>
+  < /div>
+  < div>
+    < p>Párrafo 3< /p>
+  < /div>
+  < div>
+    < p>Párrafo 4< /p>
+  < /div>
+< /div>	
+
+< form>
+  < input type="button" value="Agregar P" onClick="agregar_p()"> 
+  < input type="button" value="Agregar contenido h2" onClick="agregar_h2()"> 
+  < input type="button" value="Agregar text" onClick="agregar_text()"> 
+  < input type="button" value="Before text" onClick="agregar_Btext()"> 
+  < input type="button" value="After HTML" onClick="agregar_Alink()"> 
+< /form>
+
+</pre>
+
+<h3> Manipular HTML en result</h3>
+
+<div class = "result">
+	<h2>Contenido</h2>
+	<div>
+		<p>Párrafo 1</p>
+	</div>	
+	<div>
+		<p>Párrafo 2</p>
+	</div>
+	<div>
+		<p>Párrafo 3</p>
+	</div>
+	<div>
+		<p>Párrafo 4</p>
+	</div>
+</div>	
+<form>
+	<input type="button" value="Agregar P" onClick="agregar_p()"> 
+	<input type="button" value="Agregar contenido h2" onClick="agregar_h2()"> 
+	<input type="button" value="Agregar text" onClick="agregar_text()"> 
+	<input type="button" value="Before text" onClick="agregar_Btext()"> 
+	<input type="button" value="After HTML link" onClick="agregar_Alink()"> 
+</form>
+
+</div>
+</body>
+</html>

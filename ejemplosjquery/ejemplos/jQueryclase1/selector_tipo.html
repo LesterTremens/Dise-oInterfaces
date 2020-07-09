@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejemplos de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<script type="text/javascript">
+		function count(){
+			var total_p = $('.result p').size();	
+			alert("La cantidad de párrafos en result es " +total_p);
+		}	
+	</script>
+	<title>Funciones útiles Introducción jQuery</title>
+		
+</head>
+<body>
+
+	<div id="container">
+	
+	<h1 class="esq_red">Seleccionamos y contamos todos los párrafos</h1>
+	
+	<div class="definicion">
+		<p>jQuery nos permite seleccionar elementos de una página a través de su selector de tipo o etiqueta de HTML.</p>
+		<p>En el siguiente ejemplo; </p>
+		<ol>
+			<li>Generamos 4 párrafos descendientes al div con clase result.</li>
+			<li>Incluimos la biblioteca jQuery.</li>
+			<li>Creamos la función  count( ) que utiliza el método size( ).</li>
+			<li>Y con un formulario utilizamos el evento onClick para llamar a la función count( ).</li>
+		</ol>
+		<p><span>size( )</span>.- esta función devuelve la cantidad de elementos de un arreglo.</p>
+		<p><span>count( )</span>.- esta función despliega un cuadro de diálogo mostrando la cantidad de párrafos contenidos en el div.result </p>
+	</div>	
+	
+	<hr />
+	
+<pre>
+//Código en javascript
+< script type="text/javascript">
+	function count(){
+	var total_p = $('.result p').size();	
+	alert("La cantidad de párrafos en result es " +total_p);
+}	
+</ script>
+//código en HTMl
+
+< div class ="result">
+  < p >párrafo 1< /p>
+  < p >párrafo 2< /p>
+  < p >párrafo 3< /p>
+  < p >párrafo 4< /p>
+< /div>
+
+< form>
+  < input type="button" value="cuenta párrafos" onClick="count()"> 
+< /form>
+
+</pre>
+
+<h3>Utilizar la función size( )</h3>
+
+<div class = "result">
+	<p>párrafo 1</p>
+	<p>párrafo 2</p>
+	<p>párrafo 3</p>
+	<p>párrafo 4</p>
+</div>	
+<form>
+	<input type="button" value="Cuenta Párrafos" onClick="count()"> 
+</form>
+
+
+</div>
+</body>
+</html>

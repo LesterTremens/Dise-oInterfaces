@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejemplos de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<title>Funciones útiles Introducción jQuery</title>
+	<script type="text/javascript">
+		function aplica_firstp(){
+			$('.result p:first').css({background:'#DEA7FF',border:'1px solid #6905A8'});
+		}
+		function aplica_lastp(){
+			$('.result p:last').css({background:'#FFFF79',border:'1px solid #FFA500'});
+		}
+	</script>
+</head>
+<body>
+
+	<div id="container">
+	
+	<h1 class="esq_red">Selector posicional</h1>
+	<div class="definicion">
+		<p>En el div.result.</p>
+		<ol>
+			<li>Crear un titular h1 </li>	
+			<li>Crear 3 párrafos con contenido Lorem ipsum inmediatos al titular h1.</li>
+			<li>Crear dos funciones en jQuery con sus mecanismos de acción:
+				<ol>
+					<li>aplica_firstp().- Que utiliza el método css() para  aplicar el siguiente estilo de CSS al primer párrafo
+					    descendiente al contenedor con clase "result":
+						<ol>
+							<li>Color de fondo #DEA7FF</li>
+							<li>Borde de espesor 1px con estilo solido y color #6905A8</li>
+						</ol>
+					</li>
+					
+					<li>aplica_lastp().- Le aplica al último párrafo descendiente del contenedor con clase "resul" el siguiente
+						estilo: 
+						<ol>
+							<li>Color de fondo #FFFF79</li>
+							<li>Borde de espesor 1px con estilo solido y color #FFA500</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</div>	
+
+<pre>
+//Código en javascript
+< script type="text/javascript">
+ function aplica_firstp(){
+  $('.result p:first').css({background:'#DEA7FF',border:'1px solid #6905A8'});
+ }
+ function aplica_lastp(){
+  $('.result p:last').css({background:'#FFFF79',border:'1px solid #FFA500'}); 
+ }
+</ script>
+//código en HTMl
+< div class = "result">
+ < h1 class="esq_red">Lorem ipsum ad his scripta blandit partiendo< /h1>
+ < p>Lorem ipsum ad his < a href="#">scripta blandit partiendo< /a>, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. < /p>
+ < p>Ius id vidit volumus mandamus, vide veritus democritum te nec, < a href="#">ei eos debet libris consulatu< /a>. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te. Ne quodsi nusquam legendos has, ea dicit voluptua eloquentiam pro, ad sit quas qualisque. Eos vocibus deserunt quaestio ei.< /p>
+ < p>Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim. Eos dicat oratio partem ut, id cum ignota senserit intellegat. Sit inani ubique graecis ad, quando graecis liberavisse et cum, dicit option eruditi at duo. Homero salutatus suscipiantur eum id, tamquam voluptaria expetendis ad sed, < a href="#">nobis feugiat< /a> similique usu.< /p>
+< /div>	
+< form>
+  < input type="button" value="Aplica a p:first" onClick="aplica_firstp()"> 
+  < input type="button" value="Aplica a p:last" onClick="aplica_lastp()"> 
+< /form>
+</pre>
+
+<h3>Agregar estilos usando css()</h3>
+
+<div class = "result">
+	<h1 class="esq_red">Lorem ipsum ad his scripta blandit partiendo</h1>
+	<p>Lorem ipsum ad his <a href="#">scripta blandit partiendo</a>, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
+	<p>Ius id vidit volumus mandamus, vide veritus democritum te nec, <a href="#">ei eos debet libris consulatu</a>. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te. Ne quodsi nusquam legendos has, ea dicit voluptua eloquentiam pro, ad sit quas qualisque. Eos vocibus deserunt quaestio ei.</p>
+	<p>Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim. Eos dicat oratio partem ut, id cum ignota senserit intellegat. Sit inani ubique graecis ad, quando graecis liberavisse et cum, dicit option eruditi at duo. Homero salutatus suscipiantur eum id, tamquam voluptaria expetendis ad sed, <a href="#">nobis feugiat</a> similique usu.</p>
+</div>	
+<form>
+	<input type="button" value="Aplica a p:first" onClick="aplica_firstp()"> 
+	<input type="button" value="Aplica a p:last" onClick="aplica_lastp()"> 
+</form>
+
+</div>
+</body>
+</html>

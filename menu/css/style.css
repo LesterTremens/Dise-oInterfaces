@@ -1,0 +1,40 @@
+body{margin:0;padding:0;font:62.5% Tahoma, Arial, Sans-Serif;}
+#container{width:900px;font-size:1.6em; background:#BFBFBF; margin:5px auto; padding:5px;height:550px;}
+#container #contenedor_inmediato{background:#C7E1E9;border:1px dashed #0000FF;overflow:hidden;position:relative; height:500px;}
+#container #contenedor_inmediato h1{color:#2E2EAA;font-size:22px; margin:5px 10px;}
+#container #contenedor_inmediato ul{height:25px; background:#85AAB6;position:relative;top:15px;padding-bottom:1px;}
+#container #contenedor_inmediato ul li{float:left;list-style:none;margin:5px 0;border:1px solid #97E297; background:#DCE5DC url('images/z0.png');position:relative; top:-25px;}
+#container #contenedor_inmediato ul li:first-child{-webkit-border-top-left-radius: 10px;-moz-border-radius-topleft: 10px;}
+#container #contenedor_inmediato ul li:last-child{-webkit-border-top-right-radius: 10px;-moz-border-radius-topright: 10px;}
+/*
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+*/
+
+#container #contenedor_inmediato ul li a{display:block;padding:12px 10px;text-decoration:none;color:#304850;font-weight:700;background:url('images/fondoa.png') repeat-x left bottom;}
+
+#container #contenedor_inmediato #ocultar{width:100%;height:10px;background:url('images/ocultar2.png');position:relative;top:-10px;}
+#container #contenedor_inmediato ul li:hover {background:#7BD47B;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+#container #contenedor_inmediato ul li:hover {padding-top:5px;top:-30px;}
+#container #contenedor_inmediato ul li:hover a{color:#2D2D2D;}
+#container #contenedor_inmediato ul li.activo {background:#7BD47B;padding-top:5px;top:-30px;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+#container #contenedor_inmediato ul li.activo a{color:#2D2D2D;}
+

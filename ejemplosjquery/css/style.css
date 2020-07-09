@@ -1,0 +1,180 @@
+@import url('reset.css');
+@import url('tabla_general.css');
+body{margin:0;padding:0;font:62.5% Tahoma, Arial, Sans-Serif; background:#fff url('images/bg_body.gif') repeat-x 0 -2px;}
+h1, h2, h3{margin:10px 5px;font-weight:bold;}
+p{margin:5px 5px 10px; padding:2px;}
+li{margin:5px 0;}
+h1, h2, h3, p, ul, ol, span, table, a{word-spacing:1mm;} 
+p span, ul span, ol span, a span{color:#3F7A8E;font-weight:bold;}
+
+#container{
+	width:900px;
+	font-size:1.6em; 
+	background:#A8BBC0; 
+	margin:0 auto; 
+	padding:5px;
+	box-shadow:0 0 10px #000;
+	-moz-box-shadow:0px 0px 10px #000;
+	-webkit-box-shadow:0px 0px 10px #000;
+}
+#container ul, #container ol{margin: 15px 10px 10px 25px;padding-left:5px;}
+#container ul{list-style:url(images/item.png) circle outside;}
+#container ol{list-style-type:decimal;}
+#container a{color:#3F7A8E;font-weight:bold;}
+#container a:visited{color:#295A6B;}
+#container a:hover{color:#49495C;}
+#container h1, #container h2, #container h3{width:80%;color:#49495C;padding:5px 10px;font-family:Arial;font-weight:800;background:#9FC9D6;border:1px solid #7CA3B0;border-width:0 0 3px 0;}
+#container h1{font-size:1.8em;}
+#container h2{font-size:1.4em;}
+#container h3{font-size:1.2em; color:#35355E; font-style:italic;}
+#container form{width:90%; margin:10px 5px; overflow:hidden;}
+#container form div#encabezados span{display:block; font-weight:800;}
+#container form div{margin:5px;clear:both;}
+#container form div label, #container  form div#encabezados span:first-child{width:40%;float:left;}
+
+input[type*=button]{float:right;}
+hr{height:2px; width:95%; margin:10px auto; border:1px solid #4D4D4D;}
+
+pre{
+	width:90%;
+	margin:10px 5px;
+	overflow:hidden;
+	background:#E5E5E5;
+	border:1px dashed #4D4D4D;
+	color:#4D4D4D;
+	font-family:courier;
+	padding:5px;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -o-pre-wrap; /* Opera 7+ */
+}
+#container .definicion{width:95%;margin:10px 5px;padding:1px;}
+#container .definicion p{margin:5px 5px 10px; padding:2px; }
+
+.table_order{border:1px solid #1E0E79;border-collapse:collapse;caption-side:top;cursor:text;}
+.table_order caption{ margin:5px;padding:3px; font-weight:600;border-bottom:1px solid #1E0E79;}
+.table_order td, .table_order th{padding:6px 10px;text-align:center;}
+.table_order tr{border-top:1px solid #1E0E79;border-bottom:1px solid #1E0E79;}
+.table_order td:first-child{text-align:left;}
+.table_order th{background:#A59BE1;}
+.table_order tr:hover{background:#DCD8F2;}
+
+.result{
+	background:#B8E4B8;
+	border:1px dashed #406240;
+	color:#1A1A1A;
+	padding:5px;
+	width:90%;
+	margin:10px 5px;
+}
+#container .result h1, #container .result h2, #container .result h3{background:#74D474;border-color:#508B50;}
+.esq_red{
+	-webkit-border-radius: 25px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius: 25px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-radius: 25px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.esq_redI{
+	-webkit-border-radius:15px;
+	-webkit-border-top-left-radius:15px;
+	-webkit-border-bottom-right-radius:15px;
+	-moz-border-radius:15px;
+	-moz-border-radius-topleft:15px;
+	-moz-border-radius-bottomright:15px;
+	border-radius:15px;
+	border-top-left-radius:15px;
+	border-bottom-right-radius:15px;
+}
+.esq_sup5{
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.esq_sup15{
+	-webkit-border-top-left-radius:15px;
+	-webkit-border-top-right-radius:15px;
+	-moz-border-radius-topleft:15px;
+	-moz-border-radius-topright:15px;
+	border-top-left-radius:15px;
+	border-top-right-radius:15px;
+}
+.sombra15{
+	box-shadow:3px 2px 2px #E2B665;
+	-moz-box-shadow:3px 2px 2px #E2B665;
+	-webkit-box-shadow:3px 2px 2px #E2B665;
+}
+.separacion{word-spacing:5px;}
+.result .literal{font-family:Verdana; color:#00007C; font-style:italic;}
+.result .striped{background:#BFBFBF;}
+
+.result .prueba {background:#FFA500;}
+.nota{background:#FC9898;border:1px dashed #9F2626;color:#4D4D4D; font-family:tahoma; margin:5px 0;width:90%; padding:5px;}
+.explicacion{font-style:italic; color:#447244;background:#E5E5E5;padding:5px;border-bottom:1px solid #406A40;width:90%;}
+#container .result_img{width:60%;border:1px solid #DC9D28;margin:20px;background:#FFDEA0;}
+#container .result_img h2{background:#E3A93F;color:#C24545;margin:0;padding:6px;width:98%;border-bottom:1px solid #D88F0B; font-size:1.3em;}
+#container .result_img img{display:block; margin:20px;}
+#container .result_img p.caption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  margin-bottom:0;
+}
+#container .result .control{width:98%;margin:0 auto; padding:5px;border:1px solid #B1C6A2;border-bottom:2px solid #619561; background:#B7D0A5;overflow:hidden;}
+#container .result .control span{cursor:pointer; color:#275D6E; margin:2px 6px;float:left;}
+#container .result .control span:hover{font-style:italic;}
+#container .result .control span:last-child{float:right;}
+#container .result a{color:#3C616E;font-weight:bold;}
+#container .result a:visited{color:#4C646C;}
+#container .result a:hover{color:#429FBE;}
+.result div a{float:right;margin:5px;}
+.result > div{overflow:hidden;padding:5px;}
+
+/*
+ * Reglas de estilo sobre el bloque result_html
+ * */
+#container .result_html{
+	width:90%;
+	margin:10px 5px;
+	padding:5px;
+	color:#1A1A1A;
+	background:#90F790;
+	border:1px dotted #2AC62A;
+	overflow:hidden;
+}
+#container .result_html h1, #container .result_html h2, #container .result_html h3{
+	background:#FFFFB5;
+	color:#49495C;font-family:Arial;font-weight:800;background:transparent;
+	border:0;
+}
+#container .result_html > div{
+	width:46%;
+	float:left;
+	border-right:1px solid #BFBFBF;
+	margin-left:15px;
+}
+#container .result_html > div:last-child{
+	border-left:1px solid #E5E5E5;
+	border-right:0;
+	margin-left:0;
+}	
+#container .result_html > div .descripcion{
+    border-bottom:1px solid #BFBFBF;
+    border-top:1px solid #E5E5E5;
+    width:90%;
+    margin:0 auto;
+}
+#container .result_html > div .descripcion:first-child{
+	border-top:0;
+}
+#container .result_html > div .descripcion:last-child{
+	border-bottom:0;
+}

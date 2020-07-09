@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejercicios de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../../css/galeria.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<title>Funciones con jQuery</title>
+	<script type="text/javascript">
+		function agregarTitleCtn(){
+			$('.result #galeria img').each(function(cnt){
+                var nuevoTitulo = 'Fotografía '+ (++cnt) + ' de la Galería Fciencias'
+				$(this).prop('title',  nuevoTitulo);                
+                $('button[name=agregarTitle]').attr('disabled', 'disabled');
+                $('button[name=editTitleEach]').attr('disabled', 'disabled');
+                $('button[name=editTitle]').attr('disabled', 'disabled');
+			    alert(nuevoTitulo);
+			});
+		}
+		function editarTitleEach(){
+			$('.result #galeria img').each(function(){
+				var tituloPrevio =  $(this).prop('title');
+                var nuevoTitulo = tituloPrevio + ' (Fotografía de kienkane)'
+				$(this).prop('title', nuevoTitulo);
+                $('button[name=agregarTitle]').attr('disabled', 'disabled');
+                $('button[name=editTitleEach]').attr('disabled', 'disabled');
+                $('button[name=editTitle]').attr('disabled', 'disabled');
+                alert(nuevoTitulo);
+			});
+		}
+		function editarTitle(){
+            for(i = 0; i < $(".result #galeria img").length; i++) { 
+                var tituloPrevio =  $(".result #galeria img:eq(" + i  + ")").attr('title');
+                var nuevoTitulo = tituloPrevio + ' (Fotografía de kienkane)'
+                $(".result #galeria img:eq(" + i  + ")").prop('title', nuevoTitulo);
+                $('button[name=agregarTitle]').attr('disabled', 'disabled');
+                $('button[name=editTitleEach]').attr('disabled', 'disabled');
+                $('button[name=editTitle]').attr('disabled', 'disabled');
+                alert(nuevoTitulo);
+            }
+		}
+		function agregarAlt(){
+            $('.result #galeria img').each(function(){
+				var tituloPrevio =  $(this).attr('src');
+                var sinExt = "Imagen " + tituloPrevio.split(".")[0];
+				$(this).attr('alt',sinExt);
+                $('button[name=agregarTitle]').attr('disabled', 'disabled');
+                $('button[name=editTitleEach]').attr('disabled', 'disabled');
+                $('button[name=editTitle]').attr('disabled', 'disabled');
+                alert(sinExt);
+			});
+			
+		}
+		function agregarInfo(){
+            $('.result #galeria img').each(function(){
+            	var txt1 = "<p>" + $(this).attr('title') + "</p> <p>" + $(this).attr('alt') + "</p>";
+				$(this).after(txt1);
+			});
+			
+		}
+	</script>
+	
+</head>
+<body>
+
+	<div id="container">
+	
+<h3>Galería</h3>
+<div class="result">
+	<div id="galeria">
+		<div class="title">Edificios</div>
+		<div>
+			<p class="caption">Edificio O</p>
+			<img src="images/edificioO.jpg" title="Edificio O de FCiencias" alt="" width="260" height="195"/>
+		</div>
+		<div>
+			<p class="caption">Prometeo</p>
+			<img src="images/prometeo.jpg"  title="Fuente de la FCiencias" alt="" width="260" height="195"/>
+		</div>
+		<div>
+			<p class="caption">Tlahuizcalpan</p>
+			<img src="images/tlahuizcalpan.jpg"  title="Edificio Tlahuizcalpan" alt="" width="260" height="195"/>
+		</div>
+		<div>
+			<p class="caption">Tlahuizcalpan desde adentro</p>
+			<img src="images/tlahuizcalpan_dentro.jpg"  title="Tlahuizcalpan desde adentro" alt="" width="260" height="195"/>
+		</div>
+	</div>	
+	<button type="button" name="agregarTitle" value="Agregar titulo con contador" onClick="agregarTitleCtn()"> Agregar título con contador</button>
+	<button type="button" name="editTitleEach" value="Editar Título usando each()" onClick="editarTitleEach()"> Editar Título usando each()</button>
+	<button type="button" name="editTitle" value="Editar Título" onClick="editarTitle()"> Editar Título</button>
+	<button type="button" name="AgregarAlt" value="Agregar Alt" onClick="agregarAlt()"> Agregar Alt</button>
+	<button type="button" name="AgregarInfo" value="Agregar Info" onClick="agregarInfo()"> Agregar Info</button>
+</div>	
+
+</div>
+
+</body>
+</html>

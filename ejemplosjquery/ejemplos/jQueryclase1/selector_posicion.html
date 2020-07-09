@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejemplos de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<title>Funciones útiles Introducción jQuery</title>
+	<script type="text/javascript">
+		function oculta2(){
+			$('.result p').eq(1).hide(300);
+		}
+		function muestra2(){
+			$('.result p').eq(1).show(300);
+		}
+		function slideUp2(){
+			$('.result p').eq(1).slideUp(300);
+		}
+		function slideDown2(){
+			$('.result p').eq(1).slideDown(300);
+		}
+		function slideToggle2(){
+			$('.result p').eq(1).slideToggle(300);
+		}
+	</script>
+</head>
+<body>
+
+	<div id="container">
+	
+	<h1 class="esq_red">Selector posición</h1>
+	<div class="definicion">
+		<p>En el div.result.</p>
+		<ol>
+			<li>Crear un titular h1 </li>	
+			<li>Crear 4 párrafos con contenido Lorem ipsum inmediatos al titular h1.</li>
+			<li>Crear cinco funciones en jQuery con sus mecanismos de acción:
+				<ol>
+					<li>
+						oculta2().- Utiliza el método hide() con una duración de 300 milisegundos para ocultar el segundo
+					    párrafo.
+					</li>
+					<li>
+						muestra2().- Utiliza el método show() con una duración de 300 milisegundos para mostrar el segundo
+					    párrafo.
+					</li>
+					<li>
+						slideUp2().- Utiliza el método slideUp() con una duración de 300 milisegundos para deslizar el 
+						segundo párrafo y ocultarlo.
+					</li>					
+					<li>
+						slideDown2().- Utiliza el método slideDown() con una duración de 300 milisegundos para deslizar el 
+						segundo párrafo y mostrarlo.
+					</li>					
+					<li>
+						slideToggle2().- Utiliza el método slideToggle() que alterna los métodos slideDown() y slideUp(), 
+						con una duración de 300 milisegundos.
+					</li>					
+				</ol>
+			</li>
+		</ol>
+	</div>	
+
+<pre>
+//Código en javascript
+< script type="text/javascript">
+  function oculta2(){
+    $('.result p').eq(1).hide(300);
+  }
+  function muestra2(){
+    $('.result p').eq(1).show(300);
+  }
+  function slideUp2(){
+    $('.result p').eq(1).slideUp(300);
+  }
+  function slideDown2(){
+    $('.result p').eq(1).slideDown(300);
+  }
+  function slideToggle2(){
+    $('.result p').eq(1).slideToggle(300);
+  }
+< /script>
+</pre>
+
+<h3>Agregar estilos usando css()</h3>
+
+<div class = "result">
+	<h1 class="esq_red">Lorem ipsum ad his scripta blandit partiendo</h1>
+	<p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi 
+	   vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an
+	   eos.  
+	</p>
+	<p>Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt,
+	   ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, 
+	   sit summo dolor essent te. 
+	</p>
+	<p>Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, 
+	   has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris
+	   ei vim. 
+	</p>
+	<p>
+	   Mea te unum viderer dolores, nostrum detracto nec in, vis no partem definiebas constituam. Dicant utinam philosophia has
+	   cu, hendrerit prodesset at nam, eos an bonorum dissentiet		
+	</p>
+</div>	
+<form>
+	<input type="button" value="Oculta p2" onClick="oculta2()"> 
+	<input type="button" value="Muestra p2" onClick="muestra2()"> 
+	<input type="button" value="slideUp p2" onClick="slideUp2()"> 
+	<input type="button" value="slideDown p2" onClick="slideDown2()"> 
+	<input type="button" value="slideToggle p2" onClick="slideToggle2()"> 	
+</form>
+
+</div>
+</body>
+</html>

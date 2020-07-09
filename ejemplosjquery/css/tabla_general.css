@@ -1,0 +1,16 @@
+.tabla_general{
+	border:1px solid #1E0E79;
+	border-collapse:collapse;
+	caption-side:top;
+	cursor:text;
+}
+
+.tabla_general caption{ margin:5px;padding:3px; font-weight:600;border-bottom:1px solid #1E0E79;}
+.tabla_general td, .tabla_general th{padding:5px;text-align:center;}
+.tabla_general tr{border-top:1px solid #1E0E79;border-bottom:1px solid #1E0E79;}
+.tabla_general ul{list-style:none; border-left:1px solid #666;text-align:left;padding:0;margin:0;}
+.tabla_general ul li{margin:5px 8px;}
+
+.tabla_general td:first-child{text-align:left;}
+.tabla_general th{background:#A59BE1;}
+.tabla_general tr:hover{background:#DCD8F2;}

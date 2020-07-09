@@ -1,0 +1,32 @@
+.result #galeria {
+	display: grid;
+	grid-template-areas:
+	't t'
+    'g g'
+    'g g';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.result #galeria .title {
+	grid-area: t;
+	text-align: center;
+	padding: 5px;
+	margin: 2px;
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.result #galeria div {
+	background: #A8BBC0;
+	border:1px solid #4D4D4D;
+}
+
+.result #galeria div img {
+	padding: 5px;
+	margin: 5px;
+}
+
+.result #galeria div p {
+	margin: 5px;
+}

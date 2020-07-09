@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<meta name="author" content="dario emmanuel vazquez ceballos" />
+    <meta name="description" content="ejemplos de jQuery" />
+    <meta name="keywords" content="jQuery, php, mysql, programación en php y mysql, programación web" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" media="all" />
+	<script type="text/javascript" src="../../js/jquery-1.6.min.js"></script>
+	<title>Funciones útiles Introducción jQuery</title>
+	<script type="text/javascript">
+		function agregar_clase(){
+			$('.result p#destacado').addClass('marcado');	
+		}	
+		function remover_clase(){
+			$('.result p#destacado').removeClass('marcado');	
+		}	
+		function alternar_clase(){
+			$('.result p#destacado').toggleClass('marcado');	
+		}	
+		function mostrar_contenido(){
+			var cad = $('.result p#destacado').text();
+			alert("El texto del párrafo con id destacado es: \n"+cad);
+		}
+	</script>
+	
+	<style type="text/css">
+		#container div.result p#destacado {font-size:18px;font-style:italic;}
+		.marcado{background-color:#FFA500; font-style:none; font-variant:small-caps;padding:3px;}
+	</style>	
+	
+</head>
+<body>
+
+	<div id="container">
+	
+	<h1 class="esq_red">Alternar clases de CSS</h1>
+	
+	<div class="definicion">
+		<p>jQuery nos permite seleccionar elementos de una página a través del valor del ID del HTML.</p>
+		<p>En el siguiente ejemplo; </p>
+		<ol>
+			<li>Generamos 4 párrafos descendientes al div con clase result.</li>
+			<li>Incluimos la biblioteca jQuery.</li>
+			<li>Creamos la clase 'marcado' de CSS.</li>
+			<li>Aplicamos el valor de id "destacado" al primer párrafo contenido en el div.result, dicho elemento será el 
+			objetivo principal de los métodos.</li>
+			<li>Creamos las funciones de javascript: agregar_clase(), remover_clase(), alternar_clase() y mostrar_contenido().</li>
+			<li>Con formularios utilizamos el evento onClick para llamar a las funciones antes mencionadas.</li>
+		</ol>
+		<p><span>addClass( )</span>.- Método de jQuery que permite agregar un conjunto de clases a un elemento (elementos) de HTML.</p>
+		<p><span>removeClass( )</span>.- Método de jQuery que permite remover las clases que coinciden de la lista de parámetros con las 
+		que presentan los elementos seleccionados.</p>
+		<p><span>toggleClass( )</span>.- Método de jQuery que permite alternar un conjunto de clases a un elemento (elementos) de HTML.
+			<ol>
+				<li>Si los elementos en cuestión presentan alguna de las clases listadas, esas son removidas.</li>
+				<li>De lo contrario las agrega.</li>
+			</ol>
+		</p>
+		<p><span>text( )</span>.- Método de jQuery que devuelve la cadena de texto, de la concatenación del contenido de los elementos seleccionados 
+		(excluyendo el HTML). Puede ser usado para documentos XML y HTML.</p>
+		<p><span>agregar_clases( )</span>.- Aplica la función addClass() a los elementos seleccionados del  div.result.</p>
+		<p><span>remover_clases( )</span>.- Aplica la función removeClass() a los elementos seleccionados del  div.result.</p>
+		<p><span>alternar_clases( )</span>.- Aplica la función toggleClass() a los elementos seleccionados del  div.result.</p>
+		<p><span>mostrar_contenido( )</span>.- Aplica la función text() al párrafo con id "destacado" del div.result y despliega
+		en un cuadro de diálogo su contenido.</p>
+	</div>	
+	
+<pre>
+//reglas de estilo CSS
+< style type="text/css">
+  #container div.result p#destacado {font-size:18px;font-style:italic;}
+  .marcado{background-color:#FFA500; font-style:none; font-variant:small-caps;padding:3px;}
+< /style>
+
+//Código en javascript
+< script type="text/javascript">
+  function agregar_clase(){
+	$('.result p#destacado').addClass('marcado');	
+  }	
+  function remover_clase(){
+    $('.result p#destacado').removeClass('marcado');	
+  }	
+  function alternar_clase(){
+    $('.result p#destacado').toggleClass('marcado');	
+  }	
+  function mostrar_contenido(){
+    var cad = $('.result p#destacado').text();
+    alert("El contenido del párrafo con id destacado es: \n"+cad);
+  }
+</ script>
+
+//código en HTMl
+
+< div class ="result">
+  < p id="destacado" class="marcado">párrafo 1< /p>
+  < p >párrafo 2< /p>
+  < p >párrafo 3< /p>
+  < p >párrafo 4< /p>
+< /div>
+
+< form>
+  < input type="button" value="Agregar Clase" onClick="agregar_clase()"> 
+  < input type="button" value="Remover Clase" onClick="remover_clase()"> 
+  < input type="button" value="Alternar Clase" onClick="alternar_clase()">  
+  < input type="button" value="Mostrar Contenido" onClick="mostrar_contenido()">
+< /form>
+
+</pre>
+
+<h3>Alternar clases en result</h3>
+
+<div class = "result">
+	<p id="destacado" class="marcado">párrafo 1</p>
+	<p>párrafo 2</p>
+	<p>párrafo 3</p>
+	<p>párrafo 4</p>
+</div>	
+<form>
+	<input type="button" value="Agregar Clase" onClick="agregar_clase()"> 
+	<input type="button" value="Remover Clase" onClick="remover_clase()"> 
+	<input type="button" value="Alternar Clase" onClick="alternar_clase()"> 
+	<input type="button" value="Mostrar Contenido" onClick="mostrar_contenido()">
+</form>
+
+
+</div>
+</body>
+</html>
